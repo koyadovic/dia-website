@@ -1,0 +1,88 @@
+{% extends "surveys/base.html" %}
+{% load staticfiles %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="l-container">
+  <header class="l-header header" style="background-image: url('{% static 'surveys/img/vrcpage-header.jpg' %}')">
+    <h1 class="header-title">{{ title }}</h1>
+  </header>
+
+  <script type="text/javascript">
+    function showhide(obj, other_id) {
+        console.log(obj, other_id);
+        if(obj !== undefined && obj.value === 'other')
+          document.getElementById(other_id).style.display = 'block';
+        else
+          document.getElementById(other_id).style.display = 'none';
+    }
+  </script>
+
+  <main class="l-fullwidth main">
+    <form method="post" class="container-fluid"> {% csrf_token %}
+
+      {% for field in fields %}
+        {% if field.options %}
+          <div class="row">
+            {% if field.type == 'evaluation' %}
+              <div class="col-12 form-group field-evaluation">
+            {% else %}
+              <div class="col-12 form-group field-options">
+            {% endif %}
+
+              <label class="vrc-form-label">{{ field.display }}</label>
+              <div class="radio-group">
+              {% for option in field.options %}
+
+                {% if field.type == 'select' or field.type == 'evaluation' %}
+
+                <div class="form-check vrc-form-radiogroup">
+                  <input type="radio" class="form-check-input" id="option_{{ field.key }}_{{ option.value }}" name="{{ field.key }}" value="{{ option.value }}"
+                   onchange="showhide(this, 'option_{{ field.key }}_other_comments_div');">
+                  <label class="form-check-label" for="option_{{ field.key }}_{{ option.value }}">{{ option.display }}</label>
+                </div>
+
+                {% else %}
+
+                <div class="form-check vrc-form-radiogroup">
+                  <input type="checkbox" class="form-check-input" id="option_{{ field.key }}_{{ option.value }}" name="{{ field.key }}" value="{{ option.value }}"
+                  onchange="showhide(this, 'option_{{ field.key }}_other_comments_div');">
+                  <label for="option_{{ field.key }}_{{ option.value }}" class="form-check-label">{{ option.display }}</label>
+                </div>
+
+                {% endif %}
+
+              {% endfor %}
+
+                {% if field.options %}
+
+                  <div class="form-group vrc-form-text" id="option_{{ field.key }}_other_comments_div" style="display:none">
+                    <input type="text" class="form-control" id="option_{{ field.key }}_other_comments" name="option_{{ field.key }}_other_comments" placeholder="">
+                  </div>
+
+                {% endif %}
+              </div>
+            </div>
+          </div>      
+          
+          {% else %}
+          <div class="row">
+              <div class="col-12 form-group">
+                <label class="vrc-form-label" for="field_{{ field.key }}">{{ field.display }}</label>
+                <textarea id="field_{{ field.key }}" name="{{ field.key }}" rows="6" class="form-control"></textarea>
+              </div>
+          </div>
+        {% endif %}
+        
+      {% endfor %}
+
+      <div class="row">
+        <div class="col-12 button-container">
+          <input type="submit" name="submit" value="Send" class="vrc-button-pri vrc-button-big">
+        </div>
+      </div>
+    </form>
+  </main>
+</div>
+{% endblock %}

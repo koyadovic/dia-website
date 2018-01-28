@@ -1,0 +1,131 @@
+@import "grilla/grilla"
+
+//general styles
+@import "general"
+@import "forms"
+@import "hamburger"
+@import "seolinks"
+@import "base"
+@import "modals"
+@import "tables"
+
+//BASE
+body
+  background-color: $grey-bg
+
+//LAYOUT
+.l-container
+  margin: 0 auto
+  width: 100%
+  max-width: $md
+
+.l-header
+  width: 100%
+  height: 120px
+
+//MODULES
+.main
+  box-sizing: border-box
+  padding-top: 30px
+  padding-bottom: 15px
+  padding-left: 15px
+  padding-right: 15px
+  background-color: white
+
+.header
+  @include flex(center, center, row)
+  background-color: $grey-1
+  background-position: center center
+  background-size: cover
+  color: white
+
+  &-title
+    font-size: 2.5em
+    // text-transform: uppercase
+    font-weight: 400
+    margin-bottom: 0.1em
+    @media (max-width: $sm)
+      font-size: 2.25em
+    @media (max-width: $sm)
+      font-size: 2em
+
+.form-check-input
+  bottom: 0.750em
+  @media (max-width: $sm)
+    bottom: 0.6em
+
+.form-check-label
+  padding-top: 6px
+  padding-bottom: 6px
+  width: 100%
+  cursor: pointer
+  
+.vrc-form
+
+  &-label
+    color: $main-color
+    margin-bottom: 3px
+
+  &-text
+    padding-top: 10px
+
+.field-options
+  .vrc-form-radiogroup
+    position: relative
+    padding-left: 2em;
+
+    &:nth-child(odd)
+      background-color: $grey-bg
+ 
+.field-evaluation
+  .radio-group
+    @include flex(space-between, flex-start, row)
+
+  .vrc-form-radiogroup
+
+    @include flex(center, flex-start, column-reverse)
+    padding: 0
+    // box-sizing: border-box 
+    border: 2px solid white
+    width: 100%
+    position: relative
+
+    // &:nth-child(odd)
+    background-color: $grey-bg
+  
+  .form-check-input
+    position: absolute
+    right: 50%
+    left: calc(50% - 7px)
+    margin: 0px
+    display: none
+  
+  .form-check-label
+    @include flex(center, center, row)
+    height: 60px
+    text-align: center
+    padding: 0
+    position: static
+    margin: 0 auto
+    font-size: 1.25em
+    // padding-top: 0.5em
+
+  .form-check-input:checked ~ .form-check-label
+    transition: $linear-short
+    background-color: transparentize($main-color, 0.25)
+    color: white
+
+.survey-msg
+  text-align: center
+  font-size: 1.15em
+
+  &.error
+    color: $color-error
+
+  &.valid
+    color: $color-valid
+
+.survey-thanks
+  text-align: center
+  font-size: 1.25em
+

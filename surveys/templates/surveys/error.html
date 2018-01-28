@@ -1,0 +1,21 @@
+
+{% extends "surveys/base.html" %}
+{% load staticfiles %}
+{% block title %}Invalid survey{% endblock %}
+{% block content %}
+
+<div class="l-container">
+  <header class="l-header header" style="background-image: url('{% static 'web/img/vrcpage-header.jpg' %}')">
+    <h1 class="header-title">Invalid survey</h1>
+  </header>
+  <main class="l-fullwidth main">
+    <div class="survey-msg error">
+      <p>An error occurred while loading this survey. Please make sure you have correctly accessed the link that we have provided.</p>
+    </div>
+    <div class="survey-thanks">
+      <p>Thank you!</p>
+    </div>
+  </main>
+</div>
+{% endblock %}
+

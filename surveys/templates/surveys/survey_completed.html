@@ -1,0 +1,20 @@
+{% extends "surveys/base.html" %}
+{% load staticfiles %}
+{% block title %}Survey completed{% endblock %}
+{% block content %}
+
+<div class="l-container">
+  <header class="l-header header" style="background-image: url('{% static 'web/img/vrcpage-header.jpg' %}')">
+    <h1 class="header-title">Survey completed</h1>
+  </header>
+  <main class="l-fullwidth main">
+    <div class="survey-msg valid">
+      <p>Your survey has been sent correctly.</p>
+    </div>
+    <div class="survey-thanks">
+      <p>Thank you!</p>
+    </div>
+  </main>
+</div>
+{% endblock %}
+
