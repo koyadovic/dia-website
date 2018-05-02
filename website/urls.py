@@ -18,5 +18,7 @@ urlpatterns = [
             content_type="text/plain"
         ), name="humans_file"
     ),
-    url(r'', views.home),
+    url(r'^$', views.home),
 ]
+
+
