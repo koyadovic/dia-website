@@ -1,0 +1,11 @@
+# TEAM
+
+    Miguel Collado -- Developer -- mcollado at diamobile.com
+
+# THANKS
+
+    To my mom
+
+# TECHNOLOGY
+
+    CSS3, HTML5, Bootstrap
