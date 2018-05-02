@@ -104,3 +104,4 @@ env3/
 
 .idea/
 *.swp
+db.sqlite3
