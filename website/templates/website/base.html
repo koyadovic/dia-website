@@ -1,6 +1,5 @@
 <!doctype html>
 {% load static %}
-
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
@@ -8,27 +7,20 @@
         <title>Dia Mobile</title>
         <meta name="description" content="Official Dia Mobile Website">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <!--
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         -->
-
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
         <link rel="stylesheet" href="{% static "website/css/normalize.css" %}">
         <link rel="stylesheet" href="{% static "website/css/main.css" %}">
-
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-
-
-
         {% block content %}{% endblock %}
-
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <!--
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;

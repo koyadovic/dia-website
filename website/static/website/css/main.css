@@ -97,18 +97,73 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+* {
+    font-family: 'Roboto', sans-serif;
+}
 
 
 
 
+.background-primary {
+    background: #0076b1;
+}
+
+.background-dark {
+    background: #2e3333;
+}
 
 
+.header-container {
+    color: white;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.fake-header{
+    height: 220px;
+    width: 200%;
+    margin-left: -10%;
+    padding-top: 20px;
+    position: relative;
+    margin-top: -200px;
+    z-index: -2;
+    -webkit-transform: rotate(-1.5deg);
+    -moz-transform: rotate(-1.5deg);
+    -o-transform: rotate(-1.5deg);
+    -ms-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg);
+}
 
 
+.content-container {
+    position: relative;
+    margin-top: 100px;
+    height: 1400px;
+    padding-top: 40px;
+}
 
+.footer-col-container {
+    background: hsla(0,0%,100%,.1);
+    margin: 20px;
+    padding: 10px 10px;
+    color: white;
+    height: 200px;
+    border-radius: 4px;
+}
 
+.footer-of-footer {
+    color: white;
+    text-align: center;
+}
 
+.titles {
+    font-family: 'Open Sans', sans-serif;
+    weight: 800;
+}
 
+.texts {
+    font-family: 'Oswald', sans-serif;
+}
 
 
 
