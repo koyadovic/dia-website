@@ -101,6 +101,10 @@ textarea {
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 
 
 
@@ -142,15 +146,18 @@ textarea {
     padding-top: 40px;
 }
 
+/* Footer */
 .footer-col-container {
     background: hsla(0,0%,100%,.1);
     margin: 20px;
     padding: 10px 10px;
     color: white;
-    height: 200px;
+    height: 150px;
     border-radius: 4px;
 }
-
+.footer-col-container p {
+    margin-bottom: 5px;
+}
 .footer-of-footer {
     color: white;
     text-align: center;
@@ -159,6 +166,10 @@ textarea {
 .titles {
     font-family: 'Open Sans', sans-serif;
     weight: 800;
+}
+
+.titles .material-icons {
+    font-size: 12px;
 }
 
 .texts {
