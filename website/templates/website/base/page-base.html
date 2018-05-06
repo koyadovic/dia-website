@@ -5,10 +5,25 @@
 
     <header class="background-primary header-container">
         <div class="container">
-            <h1 class="titles">Dia Mobile</h1>
+            <div>
+                <a href="/"><img class="logo" src="{% static "/website/img/logo.png" %}"/></a>
+            </div>
+
+            <div class="menu-container">
+                <ul>
+                    <li class="{% if request.resolver_match.url_name == "home" %}active{% endif %}"><a class="texts" href="/">Inicio</a></li>
+                    <li class="{% if request.resolver_match.url_name == "diet_and_exercise" %}active{% endif %}"><a class="texts" href="/">Dieta & Ejercicio</a></li>
+                    <li class="{% if request.resolver_match.url_name == "diabetes" %}active{% endif %}"><a class="texts" href="/">Diabetes</a></li>
+                    <li class="{% if request.resolver_match.url_name == "blog" %}active{% endif %}"><a class="texts" href="/">Blog</a></li>
+                    <li class="{% if request.resolver_match.url_name == "plans" %}active{% endif %}"><a class="texts" href="/">Planes</a></li>
+                </ul>
+            </div>
+
         </div>
     </header>
+    <!--
     <header class="background-primary fake-header"></header>
+    -->
 
     <section class="content-container">
         <div class="container">
