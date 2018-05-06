@@ -7,3 +7,7 @@ def home(request):
 
 def view404(request):
     return render(request, template_name='website/404.html')
+
+
+def favicon(request):
+    return
