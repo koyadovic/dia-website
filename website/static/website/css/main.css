@@ -104,7 +104,10 @@ textarea {
 body {
     overflow-x: hidden;
 }
-
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
 
 
@@ -141,9 +144,10 @@ body {
 
 .content-container {
     position: relative;
-    margin-top: 100px;
-    height: 1400px;
+    margin-top: 40px;
     padding-top: 40px;
+
+    min-height: calc(100% - 480px);
 }
 
 /* Footer */
@@ -165,15 +169,16 @@ body {
 
 .titles {
     font-family: 'Open Sans', sans-serif;
-    weight: 800;
 }
-
 .titles .material-icons {
     font-size: 12px;
 }
-
 .texts {
     font-family: 'Oswald', sans-serif;
+}
+
+.centered {
+    text-align: center;
 }
 
 

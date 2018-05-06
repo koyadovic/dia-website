@@ -1,54 +1,10 @@
-{% extends "website/base.html" %}
+{% extends "website/base/page-base.html" %}
+{% load static %}
 
-{% block content %}
 
-    <header class="background-primary header-container">
-        <div class="container">
-            <h1 class="titles">Dia Mobile</h1>
-        </div>
-    </header>
-    <header class="background-primary fake-header"></header>
+{% block page_content %}
 
-    <section class="content-container">
-        <div class="container">
-            <h1 class="titles">Body a tope</h1>
-            <p class="texts">Esto es un test de texto así tal cual.</p>
-        </div>
-    </section>
-
-    <footer class="background-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col footer-col-container">
-                    <p class="titles"><span><i class="material-icons">visibility</i></span> Nosotros</p>
-                    <p class="texts">¿Quiénes somos?</p>
-                    <p class="texts">Blog</p>
-                </div>
-                <div class="col footer-col-container">
-                    <p class="titles"><span><i class="material-icons">school</i></span> Legal</p>
-                    <p class="texts">Términos y condiciones</p>
-                    <p class="texts">Cookies</p>
-                    <p class="texts">Privacidad</p>
-                </div>
-                <div class="col footer-col-container">
-                    <p class="titles"><span><i class="material-icons">help_outline</i></span> Ayuda</p>
-                    <p class="texts">Preguntas frecuentes</p>
-                    <p class="texts">Contacto</p>
-                </div>
-                <div class="col footer-col-container">
-                    <p class="titles"><span><i class="material-icons">smartphone</i></span> Aplicaciones móviles</p>
-                    <p class="texts">Android</p>
-                    <p class="texts">iPhone</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col footer-of-footer">
-                    <p class="texts">Dia Mobile, 2018</p>
-                </div>
-            </div>
-        </div>
-
-    </footer>
+<h1 class="titles">Body a tope</h1>
+<p class="texts">Esto es un test de texto así tal cual.</p>
 
 {% endblock %}
