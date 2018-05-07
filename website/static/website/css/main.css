@@ -130,9 +130,16 @@ html, body {
     background: #2e3333;
 }
 
+.text-dark {
+    color: #666;
+}
 .text-primary {
     color: #0076b1;
 }
+.text-primary-dark {
+    color: #004b81;
+}
+
 .text-secondary {
     color: #FCE57C;
 }
@@ -141,22 +148,22 @@ html, body {
 }
 
 
-
 /* LOGO */
 .logo {
-    width: 100px;
+    width: 75px;
+    margin-right: 20px;
 }
 
 .header-container {
     color: white;
-    /* height: 150px; */
+    height: 75px;
 }
 .header-container > div {
     vertical-align: bottom;
 }
 .header-container > div > * {
     vertical-align: bottom;
-    display: block;
+    display: inline-block;
 }
 
 .fake-header{
@@ -178,8 +185,7 @@ html, body {
 .content-container {
     position: relative;
     padding-top: 40px;
-
-    min-height: calc(100% - 380px);
+    min-height: calc(100% - 300px);
 }
 
 /* Footer */
@@ -188,16 +194,30 @@ html, body {
     margin: 20px;
     padding: 10px 10px;
     color: white;
-    height: 180px;
+    height: 150px;
     border-radius: 4px;
 }
 .footer-col-container p {
     margin-bottom: 5px;
 }
+.footer-col-container a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5px;
+    display: block;
+}
+.footer-col-container a:hover {
+    text-decoration: none;
+    color: #55a5e3;
+}
+
+
+
 .footer-of-footer {
     color: white;
     text-align: center;
 }
+
 
 .titles {
     font-family: 'Open Sans', sans-serif;
@@ -225,12 +245,12 @@ html, body {
 }
 .menu-container li {
     display: inline-block;
-    min-width: 100px;
-    font-size: 1.5em;
+    min-width: 75px;
+    font-size: 1.2em;
     text-align: center;
     height: 1.8em;
     color: white;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .menu-container a {
@@ -243,13 +263,13 @@ html, body {
 }
 
 .menu-container li {
-    transition: border-bottom .2s;
+    transition: border-bottom .3s;
 }
 .menu-container li.active {
-    border-bottom: 5px solid #FCE57C;
+    border-bottom: 3px solid #FCE57C;
 }
 .menu-container li:hover {
-    border-bottom: 5px solid white;
+    border-bottom: 3px solid white;
 }
 
 

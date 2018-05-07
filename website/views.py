@@ -3,12 +3,37 @@ from django.http import HttpResponseNotFound, HttpResponseServerError
 from django.template import loader
 
 
+"""
+Pages
+"""
+
+
 def home(request):
     return render(request, template_name='website/home.html')
 
 
-def view404(request):
-    return HttpResponseNotFound(request, template_name='website/404.html')
+def diet_and_exercise(request):
+    return render(request, template_name='website/diet_and_exercise.html')
+
+
+def diabetes(request):
+    return render(request, template_name='website/diabetes.html')
+
+
+def plans(request):
+    return render(request, template_name='website/plans.html')
+
+
+def faq(request):
+    return render(request, template_name='website/faq.html')
+
+
+def cookies(request):
+    return render(request, template_name='website/cookies.html')
+
+
+def terms_and_conditions(request):
+    return render(request, template_name='website/terms_and_conditions.html')
 
 
 """

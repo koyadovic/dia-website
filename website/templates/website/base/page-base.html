@@ -11,11 +11,9 @@
 
             <div class="menu-container">
                 <ul>
-                    <li class="{% if request.resolver_match.url_name == "home" %}active{% endif %}"><a class="texts" href="/">Inicio</a></li>
-                    <li class="{% if request.resolver_match.url_name == "diet_and_exercise" %}active{% endif %}"><a class="texts" href="/">Dieta & Ejercicio</a></li>
-                    <li class="{% if request.resolver_match.url_name == "diabetes" %}active{% endif %}"><a class="texts" href="/">Diabetes</a></li>
-                    <li class="{% if request.resolver_match.url_name == "blog" %}active{% endif %}"><a class="texts" href="/">Blog</a></li>
-                    <li class="{% if request.resolver_match.url_name == "plans" %}active{% endif %}"><a class="texts" href="/">Planes</a></li>
+                    <li class="{% if request.resolver_match.url_name == "diet_and_exercise" %}active{% endif %}"><a class="texts" href="/diet-and-exercise/">Dieta & Ejercicio</a></li>
+                    <li class="{% if request.resolver_match.url_name == "diabetes" %}active{% endif %}"><a class="texts" href="/diabetes/">Diabetes</a></li>
+                    <li class="{% if request.resolver_match.url_name == "plans" %}active{% endif %}"><a class="texts" href="/plans/">Planes</a></li>
                 </ul>
             </div>
 
@@ -43,13 +41,13 @@
                 </div>
                 <div class="col footer-col-container">
                     <p class="titles"><span><i class="material-icons">school</i></span> Legal</p>
-                    <p class="texts">Términos y condiciones</p>
-                    <p class="texts">Cookies</p>
-                    <p class="texts">Privacidad</p>
+                    <a href="/terms-and-conditions/" class="texts">Términos y condiciones</a>
+                    <a href="/cookies/" class="texts">Cookies</a>
+                    <p href="/faq/" class="texts">Privacidad</p>
                 </div>
                 <div class="col footer-col-container">
                     <p class="titles"><span><i class="material-icons">help_outline</i></span> Ayuda</p>
-                    <p class="texts">Preguntas frecuentes</p>
+                    <a href="/faq/" class="texts">Preguntas frecuentes</a>
                     <p class="texts">Contacto</p>
                 </div>
                 <div class="col footer-col-container">
